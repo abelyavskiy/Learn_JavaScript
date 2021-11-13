@@ -7,7 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <h2>World 2</h2>
+<script>
+    
+    let login;
+    let pass;
+    
+    login = prompt("Input your login",'');
+
+    if (login == null || login == '') {
+        alert("Отменено");
+    } else if (login != "Admin") {
+        alert("Я вас не знаю");
+    } else {
+        pass = prompt("Input your pass",'');
+        
+        if (pass == null || pass == '') {
+            alert("Отменено");
+        } else if (pass != "Я Главный") {
+            alert("Неверный пароль");
+        } else {
+            alert("Здравствуйте!");
+        }
+    }
+
+</script>
 </body>
 </html>
