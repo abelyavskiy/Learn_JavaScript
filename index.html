@@ -8,28 +8,16 @@
 </head>
 <body>
 <script>
-    
-    let login;
-    let pass;
-    
-    login = prompt("Input your login",'');
-
-    if (login == null || login == '') {
-        alert("Отменено");
-    } else if (login != "Admin") {
-        alert("Я вас не знаю");
-    } else {
-        pass = prompt("Input your pass",'');
-        
-        if (pass == null || pass == '') {
-            alert("Отменено");
-        } else if (pass != "Я Главный") {
-            alert("Неверный пароль");
-        } else {
-            alert("Здравствуйте!");
+    let n = +prompt("Input number","");    
+    label: for (let i = 2; i <= n; i++) {
+        for (let y = 2; y < i; y++) {
+            if (i%y == 0) {
+                continue label;
+            }
         }
+        alert(i);
     }
-
+    
 </script>
 </body>
 </html>
